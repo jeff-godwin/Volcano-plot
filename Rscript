@@ -17,5 +17,7 @@ unique(keyvals)
 keyvals[1:20]
 
 png("volcano.png", width = 5*300,  height = 5*300, res = 300)
-EnhancedVolcano(res,lab = as.character(res$id),xlim=c(-8,8),x='log2FC',y='pval',title='Plot tittle',pCutoff=0.05,FCcutoff=2.0,hline=0.05,vline=c(2,-2),pointSize=1.5,labSize=3.5,colCustom = keyvals,selectLab =c('gene1','gene2',...))
+EnhancedVolcano(res,lab = as.character(res$id),xlim=c(-8,8),x='log2FC',y='pval',title='Plot title',pCutoff=0.05,FCcutoff=2.0,hline=0.05,vline=c(2,-2),pointSize=1.5,labSize=3.5,colCustom = keyvals,selectLab =c('gene1','gene2',...))
+## xlim=c(x,y) & ylim=c(x,y) can be used to limit the length of either of the axes
+
 dev.off()
