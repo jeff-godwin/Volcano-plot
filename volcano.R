@@ -16,6 +16,6 @@ unique(names(keyvals))
 unique(keyvals)
 keyvals[1:20]
 
-png("volcano.png", width = 1500,  height = 1500, res = 300, pointsize = 8)
+png("volcano.png", width = 1500,  height = 1500, res = 300)
 EnhancedVolcano(res,lab = as.character(res$ID),x='log2FoldChange',y='pval',title='Volcano',pCutoff=0.05,FCcutoff=2.0, selectLab = c('abcd'),cutoffLineType = 'blank',hline=0.05,vline=c(2,-2),pointSize=1.5,labSize=3.5,colCustom = keyvals,gridlines.major = FALSE,gridlines.minor = FALSE)
 dev.off()
